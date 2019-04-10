@@ -6,15 +6,14 @@ $(function() {
       $area = $('#area');
 
   $btnCal.click(function(){
-    var w = Number($width.val()),
-        h = Number($height.val());
+    var w = $width.val(),
+        h = $height.val();
 
-    var p = 2 * (w + h),
-        a = w * h;
-
-    $perimeter.val(p);
-    $area.val(a);       
-            
+    var r=new Reactangle(w,h);
+        
+    $perimeter.val(r.perimeter());
+    $area.val(r.area());
+              
   });
 
 });
